@@ -53,11 +53,9 @@ def gross_per_studio(collection)
     puts collection[movie_index]
     studio = collection[movie_index][:studio]
     worldwide_gross = collection[movie_index][:worldwide_gross]
-    old_gross = if movie_gross[studio] == nil 
-      0 
-    else
-      movie_gross[studio]
-    end
+    old_gross = movie_gross[studio] || 0 
+    
+    
     puts "studio : #{studio} ****** old gross : #{old_gross} world_gross : #{worldwide_gross}"
     
     new_gross = old_gross += worldwide_gross
