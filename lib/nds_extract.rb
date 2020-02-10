@@ -57,7 +57,7 @@ def gross_per_studio(collection)
     else
       movie_gross[studio]
     end
-    puts "#{studio} ****** old gross : #{old_gross} world_gross : #{worldwide_gross}"
+    puts "studio : #{studio} ****** old gross : #{old_gross} world_gross : #{worldwide_gross}"
     
     new_gross = old_gross += worldwide_gross
     movie_gross[studio] = new_gross
